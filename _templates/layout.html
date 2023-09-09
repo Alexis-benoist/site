@@ -3,9 +3,9 @@
   <head>
     <meta charset=utf-8>
   {% block htmlhead %}
-    <title>{% block title %}Home{% endblock %} | Armin Ronacher's Thoughts and Writings</title>
+    <title>{% block title %}Home{% endblock %} | Thoughts and Writings</title>
     <link rel="stylesheet" href="/static/new-style.css" type="text/css">
-    <link href="/feed.atom" rel="alternate" title="Armin Ronacher's Thoughts and Writings" type="application/atom+xml">
+    <link href="/feed.atom" rel="alternate" title="Thoughts and Writings" type="application/atom+xml">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     {%- for link in links %}
     <link rel="{{ link.rel }}" href="{{ link.href }}"{%
@@ -13,45 +13,16 @@
     {%- endfor %}
     <meta property="title" content="{{ self.title() }}">
     <meta property="og:title" content="{{ self.title() }}">
-    <meta name="twitter:site" content="@mitsuhiko">
-    <meta name="twitter:title" content="{{ self.title() }}">
     <link rel="me" href="https://hachyderm.io/@mitsuhiko">
   {% endblock %}
   </head>
   <body>
     <div class=container>
       <div class=header>
-        <a href="/about/">Armin Ronacher</a>'s Thoughts and Writings
-      </div>
-      <div class=navigation>
-        <ul>
-          <li><a href="/">blog</a>
-          <li><a href="/archive/">archive</a>
-          <li><a href="/tags/">tags</a>
-          <li><a href="/projects/">projects</a>
-          <li><a href="/talks/">talks</a>
-          <li><a href="/about/">about</a>
-        </ul>
+        Thoughts and Writings
       </div>
       <div class=body>
         {% block body %}{% endblock %}
-      </div>
-      <div class=footer>
-        <p>&copy; Copyright {{ format_date(format='YYYY') }} by Armin Ronacher.
-        <p>
-          Content licensed under the Creative Commons
-          attribution-noncommercial-sharealike License.
-        <p>
-          Contact me via <a href="mailto:armin.ronacher@active-4.com">mail</a>,
-          <a href="http://twitter.com/mitsuhiko">twitter</a>,
-          <a href="http://github.com/mitsuhiko">github</a> or
-          <a href="http://bitbucket.org/mitsuhiko">bitbucket</a>.
-        <p>
-          You can <a href="https://github.com/sponsors/mitsuhiko/">sponsor me on github</a>.
-        <p>
-          More info: <a href="/about#imprint">imprint</a>.
-          Subscribe <a href="/feed.atom" rel="alternate" title="Armin Ronacher's
-            Thoughts and Writings">to Atom feed</a>
       </div>
     </div>
   </body>
